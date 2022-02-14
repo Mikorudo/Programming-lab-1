@@ -6,12 +6,14 @@ public:
 	int GetValue(long index, int& result);
 	int SetValue(long index, int value);
 	/*Переопределение []*/
+	~LargeArrayCreation();
 private:
 	std::string filename;
 	long size;
-	FILE* filePtr;
+	std::fstream* filePtr;
 	/*Буфер страниц*/
 	/*Массив битовых карт страницы*/
 	/**/
 };
 
+/* std::ios::app - возможная ошибка*/
