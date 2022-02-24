@@ -1,9 +1,14 @@
 #pragma once
+#include "PageStruct.h"
+#include <iostream>
+#include <fstream>
+#include <exception>
+#include <bitset>
 
 class LargeArrayCreation {
 public:
 	const int intSize = sizeof(int);
-	const int pageSize = 512 * 1024;
+	const int pageSize = 512;
 	const int intCount = pageSize / intSize;
 	LargeArrayCreation(long _size, std::string _filename);
 	void* /*сменить тип данных*/ GetAddress(long index) const;
@@ -17,7 +22,7 @@ private:
 	long size;
 	std::fstream* filePtr;
 	Page pages[5];
-	std::bitset<intCount> bits; 
+	std::bitset<128> bits; 
 };
 
 /* std::ios::app - возможная ошибка*/

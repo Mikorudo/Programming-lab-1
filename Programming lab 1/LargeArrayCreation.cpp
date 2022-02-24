@@ -1,11 +1,7 @@
 #include "LargeArrayCreation.h"
-#include "PageStruct.h"
-#include <string>
-#include <fstream>
-#include <exception>
-#include <bitset>
 
-LargeArrayCreation::LargeArrayCreation(long _size, std::string _filename = "default.dat") {
+
+LargeArrayCreation::LargeArrayCreation(long _size, std::string _filename) {
 	if (size < 0) {
 		throw std::exception("Negative array size");
 	}
