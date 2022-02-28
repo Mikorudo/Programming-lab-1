@@ -4,6 +4,7 @@
 #include "PageStruct.h"
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <exception>
 #include <bitset>
 
@@ -21,7 +22,7 @@ private:
 	long size;
 	std::fstream* filePtr;
 	Page pages[PagesInMemory];
-	std::bitset<PageSize/4> bits[PagesInMemory];
+	std::bitset<PageSize / 4> bitMaps[PagesInMemory];
 	void savePage();
 	Page LoadPage();
 };
