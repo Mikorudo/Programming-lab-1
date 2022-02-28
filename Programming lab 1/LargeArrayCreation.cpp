@@ -21,6 +21,7 @@ LargeArray::LargeArray(long _size, std::string _filename) {
 		throw std::exception("Couldn't open file");
 	}
 }
+//123
 LargeArray::~LargeArray() {
 	if (filePtr != NULL)
 		delete filePtr;
